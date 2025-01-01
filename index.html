@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Happy New Year 2025</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h1 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+            text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.2rem;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .input-field:focus {
+            background-color: #ffffff;
+            box-shadow: 0px 0px 10px rgba(0, 200, 255, 0.7);
+        }
+
+        button {
+            padding: 15px;
+            font-size: 1.2rem;
+            background-color: #00c6ff;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+            color: white;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #0072ff;
+        }
+
+        .footer {
+            margin-top: 15px;
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        .footer a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+
+        @keyframes gradient {
+            0% {
+                background: linear-gradient(to right, #00c6ff, #0072ff);
+            }
+            50% {
+                background: linear-gradient(to right, #ff7e5f, #feb47b);
+            }
+            100% {
+                background: linear-gradient(to right, #00c6ff, #0072ff);
+            }
+        }
+
+        body {
+            animation: gradient 5s ease infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>नववर्ष 2025 की शुभकामनाएँ!</h1>
+      
+        <input type="text" id="nameInput" class="input-field" placeholder="Your Good Name" />
+        <button onclick="login()">Login</button>
+        <div class="footer">
+            <p>New here? <a href="#">Sign up</a></p>
+        </div>
+    </div>
+
+    <script>
+        function login() {
+            const userName = document.getElementById("nameInput").value;
+            if (userName) {
+                // Store the user's name in localStorage
+                localStorage.setItem("userName", userName);
+                // Redirect to the welcome page
+                window.location.href = "welcome.html";
+            } else {
+                alert("Please enter your name!");
+            }
+        }
+    </script>
+</body>
+</html>
