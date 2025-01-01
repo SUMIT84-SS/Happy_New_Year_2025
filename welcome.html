@@ -12,13 +12,24 @@
             color: white;
             font-family: 'Arial', sans-serif;
             overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             text-align: center;
+        }
+
+        .content {
+            max-width: 90%;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-sizing: border-box;
         }
 
         h1 {
             font-size: 4rem;
             margin: 0;
-            margin-top: 20%;
             animation: glow 2s infinite alternate;
             text-shadow: 0 0 10px #ff9a8b, 0 0 20px #ff6a88, 0 0 30px #ff99cc;
         }
@@ -36,9 +47,8 @@
         }
 
         #userName {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: bold;
-            color: white;
             margin-top: 20px;
             white-space: nowrap;
             display: inline-block;
@@ -49,6 +59,9 @@
             position: absolute;
             top: 0;
             left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
         }
 
         @keyframes glow {
@@ -69,51 +82,51 @@
             }
         }
 
-        /* Responsive adjustments for smaller screens */
+        /* Responsive adjustments */
         @media (max-width: 768px) {
             h1 {
-                font-size: 3rem; /* Decrease font size for smaller screens */
-                margin-top: 10%;
+                font-size: 3rem;
             }
 
             p {
-                font-size: 1.2rem; /* Adjust font size */
+                font-size: 1.2rem;
             }
 
             #clock {
-                font-size: 2.5rem; /* Smaller clock size */
+                font-size: 2.5rem;
             }
 
             #userName {
-                font-size: 2.5rem; /* Smaller name size */
+                font-size: 2rem;
             }
         }
 
         @media (max-width: 480px) {
             h1 {
-                font-size: 2.5rem; /* Further reduce for very small screens */
-                margin-top: 15%;
+                font-size: 2.5rem;
             }
 
             p {
-                font-size: 1rem; /* Adjust further for mobile */
+                font-size: 1rem;
             }
 
             #clock {
-                font-size: 2rem; /* Adjust clock size */
+                font-size: 2rem;
             }
 
             #userName {
-                font-size: 2rem; /* Adjust name size */
+                font-size: 1.5rem;
             }
         }
     </style>
 </head>
 <body>
-    <h1>🎉 Happy New Year 2025 🎉</h1>
-    <p>Celebrate the arrival of a wonderful new year!</p>
-    <div id="clock"></div>
-    <p id="userName"></p>
+    <div class="content">
+        <h1>🎉 Happy New Year 2025 🎉</h1>
+        <p>Celebrate the arrival of a wonderful new year!</p>
+        <div id="clock"></div>
+        <p id="userName"></p>
+    </div>
     <canvas id="confetti"></canvas>
 
     <script>
