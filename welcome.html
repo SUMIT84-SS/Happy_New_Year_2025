@@ -38,7 +38,7 @@
         #userName {
             font-size: 3rem;
             font-weight: bold;
-            color: "white";
+            color: white;
             margin-top: 20px;
             white-space: nowrap;
             display: inline-block;
@@ -66,6 +66,45 @@
             }
             100% {
                 transform: translateX(-100%);
+            }
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem; /* Decrease font size for smaller screens */
+                margin-top: 10%;
+            }
+
+            p {
+                font-size: 1.2rem; /* Adjust font size */
+            }
+
+            #clock {
+                font-size: 2.5rem; /* Smaller clock size */
+            }
+
+            #userName {
+                font-size: 2.5rem; /* Smaller name size */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.5rem; /* Further reduce for very small screens */
+                margin-top: 15%;
+            }
+
+            p {
+                font-size: 1rem; /* Adjust further for mobile */
+            }
+
+            #clock {
+                font-size: 2rem; /* Adjust clock size */
+            }
+
+            #userName {
+                font-size: 2rem; /* Adjust name size */
             }
         }
     </style>
